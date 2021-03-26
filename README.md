@@ -6,7 +6,7 @@ The first method of light computation which i used is **Phong Shading** which gi
 
 The last method of shading i used is **Deffered Shading**. This method is as realistic as Phong Shading but needs less time to compute thanks to three buffers used to compute color of every pixel. In Phong Shading color of every pixel is computed and then rederred to the screen which may cause overwriting old color (because currently rendered object is closer to the camera than the object that was renderred previously). Deffered Shading eliminates this problem by using one pair of shaders (vertex- and fragmentshader), to compute buffers containing informations about pixels colors, and a second pair od sahders to renderr each pixel. Thanks to that each pixel is renderred only once which saves a lot of time.
 
-Fog density depends on the distance between camera and point inthe scene - the farther the camera is from the point the more dense the fog is. In the project I used [exponential fog](https://www.opengl.org/archives/resources/code/samples/advanced/advanced97/notes/node122.html "exponential fog"). 
+Fog density depends on the distance between camera and point in the scene - the farther the camera is from the point the more dense the fog is. In the project I used [exponential fog](https://www.opengl.org/archives/resources/code/samples/advanced/advanced97/notes/node122.html "exponential fog"). 
 
 ## Project functionalities
 Project uses keybindig for changing the settings. Below you can find description of keys and corresponding options. 
