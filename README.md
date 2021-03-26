@@ -2,7 +2,9 @@
 
 ## Project description
 In this project i used three methods to calculate light and fog.\
-The first method of light computation which i used is **Phong Shading** which gives realistics efects thanks to computation of the color of every pixel. The second method is **Gouraud Shading**. It is much faster than Phong Shading but it has it's drawbacks - it's nowhere near realism. The efect is caused by computing light, only in the vertices of the mesh triangles. Computed color is then interpolated to other pixels of the triangle, based on their position.
+The first method of light computation which i used is **Phong Shading** which gives realistics efects thanks to computation of the color of every pixel. 
+
+The second method is **Gouraud Shading**. It is much faster than Phong Shading but it has it's drawbacks - it's nowhere near realism. The efect is caused by computing light, only in the vertices of the mesh triangles. Computed color is then interpolated to other pixels of the triangle, based on their position.
 
 The last method of shading i used is **Deffered Shading**. This method is as realistic as Phong Shading but needs less time to compute thanks to three buffers used to compute color of every pixel. In Phong Shading color of every pixel is computed and then rederred to the screen which may cause overwriting old color (because currently rendered object is closer to the camera than the object that was renderred previously). Deffered Shading eliminates this problem by using one pair of shaders (vertex- and fragmentshader), to compute buffers containing informations about pixels colors, and a second pair od sahders to renderr each pixel. Thanks to that each pixel is renderred only once which saves a lot of time.
 
@@ -36,6 +38,9 @@ Turning the time cycle off means it will be stopped exactly in the moment you cl
 
 **Warning** It make take some time to notice the change of daylight.
 
+### Close application
+To close the application click ESC.
+
 ## Cameras
 In the project I inluded four types of cameras (number in the list is also the key which corresponds to the camera).
 1. Default camera is "free" which means using the mouse and arrows its position can be changed.
@@ -51,7 +56,7 @@ In the project I inluded four types of cameras (number in the list is also the k
 ![](Screenshots/gouraud_shading.png)
 
 ### Day/night cycle
-![](Screenshots/day.png)
+![](Screenshots/afternoon.png)
 ![](Screenshots/night.png)
 
 ### Fog on
